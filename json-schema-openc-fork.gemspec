@@ -2,15 +2,15 @@ require 'yaml'
 
 version_yaml = YAML.load(File.open('VERSION.yml').read)
 version = "#{version_yaml['major']}.#{version_yaml['minor']}.#{version_yaml['patch']}"
-gem_name = "json-schema"
+gem_name = "json-schema-openc-fork"
 
 Gem::Specification.new do |s|
   s.name = gem_name
   s.version = version
   s.authors = ["Kenny Hoxworth"]
   s.email = "hoxworth@gmail.com"
-  s.homepage = "http://github.com/ruby-json-schema/json-schema/tree/master"
-  s.summary = "Ruby JSON Schema Validator"
+  s.homepage = "http://github.com/openc/json-schema/tree/master"
+  s.summary = "OpenCorporates temporary fork of Ruby JSON Schema Validator"
   s.files = Dir[ "lib/**/*", "resources/*.json" ]
   s.require_path = "lib"
   s.test_files = Dir[ "test/**/test*", "test/{data,schemas}/*.json" ]
